@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Ubuntu&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 html {
     height: 100%;
@@ -78,47 +80,42 @@ h1 {
     background-color: #121228;
     grid-area: header;
 }
-.aside {
-    background-color: tomato;
-    grid-area: aside;
-    display: none;
-}
 .inicio {
     grid-area: inicio;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVjGCJfPbGvu3tD9OWya9lChMVNHsnGExfaA&usqp=CAU");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_5mueGLbc2_fihK1B2aySVmIbBb7TeXlfYcl34PB3&s");
     background-size: cover;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
     align-items: center;
 }
 .inicio img {
     margin: 5rem;
-    border-radius: 50%;
-    height: 300px;
-    border: 10px solid white;
-}
-.inicio p {
-    font-size: 1.1rem;
-    color: white;
-    text-align: justify;
+    border: 2px solid crimson;
+    height: 400px;
+    border: 5px solid crimson;
 }
 .container {
     display: inline-block;
 }
-.text {
-    text-align: start;
+.texto {
     color: white;
-    font-size: 10rem;
     font-family: monospace;
+    font-size: 1.5rem;
+    line-height: 30px;
     font-weight: bold;
-    letter-spacing: 5px;
-    border-right: 5px solid;
+    letter-spacing: 2px;
+    border-right: 1px solid;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
+    margin-top: 2rem;
     animation: 
     typing 2s steps(28),
     cursor .4s step-end infinite alternate;
+}
+.texto b {
+    color: crimson;
 }
 @keyframes cursor {
     50% {border-color: transparent;}
@@ -126,21 +123,98 @@ h1 {
 @keyframes typing {
     from {width: 0;}
 }
+.inicio .texto__info {
+    font-size: 1rem;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    margin: 1rem 1rem;
+}
+.inicio__btn {
+    background-color: crimson;
+    color: white;
+    height: 50px;
+    width: 150px;
+    border: none;
+    margin-top: 2rem;
+}
 .content {
-    background-color: azure;
     grid-area: main;
+    background-color: azure;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+}
+.content__info {
+    padding: 1rem;
+}
+.content img {
+    height: 100%;
+    width: 50vw;
+    object-fit: cover;
+}
+.content h3 {
+    text-align: start;
+    border-bottom: 3px solid crimson;
+    margin-bottom: 1rem;
+}
+.content p {
+    text-align: justify;
 }
 .tecnologia {
-    background-color: coral;
     grid-area: tecnologia;
+    padding: 0;
+    color: white;
+    width: 100%;
+}
+.tecnologia__container {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/005/490/643/non_2x/network-background-with-plexus-line-geometric-pattern-abstract-banner-illustration-for-website-macromolecule-ai-wallpaper-vector.jpg");
+    background-size: cover;
+    text-align: start;
+    padding: 2rem;
+}
+.tecnologia h4 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.tecnologia__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
+    gap: 50px;
+}
+.tecnologia__grid div {
+    height: 8rem;
+    border: 2px solid snow;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
 }
 .proyecto {
     background-color: yellowgreen;
     grid-area: proyecto;
 }
 .footer {
-    background-color: slategrey;
+    background-color: rgb(188, 14, 66);
     grid-area: footer;
+}
+.contactos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.contactos h6 {
+    font-size: 1.5rem;
+}
+.contactos button {
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 .grid__container {
     display: grid;
@@ -150,26 +224,23 @@ h1 {
     "main" auto
     "tecnologia" auto
     "proyecto" auto
-    "footer" 100px;
+    "footer" auto;
 }
 @media (min-width: 800px) {
 
     .grid__container {
-        grid-template-columns: 150px auto;
-        grid-template-rows: 60px auto auto auto auto 100px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 100vh auto auto auto auto;
         grid-template-areas: 
-        "header header"
-        "aside inicio"
-        "aside main"
-        "aside tecnologia"
-        "aside proyecto"
-        "footer footer";
-    }
-    .aside {
-        display: block;
+        "header"
+        "inicio"
+        "main"
+        "tecnologia"
+        "proyecto"
+        "footer";
     }
 }
-@media (max-width:768px) {
+@media (max-width:769px) {
     .nav-link {
         color: white;
         text-decoration: none;
@@ -211,5 +282,30 @@ h1 {
     }
     .nav__menu--visible {
         left: 0;
+    }
+    .inicio {
+        display: flex;
+        flex-direction: column;
+    }
+    .inicio .texto__info {
+        font-size: .9rem;
+        margin: 0rem 3rem;
+    }
+}
+@media (max-width:550px) {
+    .inicio img {
+        height: 200px;
+    }
+    .inicio .texto {
+        font-size: 1.1rem;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .content img {
+        width: 100%;
+        height: max-content;
     }
 }

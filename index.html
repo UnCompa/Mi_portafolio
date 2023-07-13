@@ -14,31 +14,67 @@
                 <div class="U__icon"><i class="fa-solid fa-u"></i></div>
                 <h1>UNCOMPA</h1>
             </div>
-            <ul class="nav__menu nav__menu--visible" >
-                <li class="nav__menu-item"><a href="#" class="menu-link nav-link">Inicio</a></li>
-                <li class="nav__menu-item"><a href="#" class="menu-link nav-link">Contenido</a></li>
-                <li class="nav__menu-item"><a href="#" class="menu-link nav-link">Tecnologias</a></li>
-                <li class="nav__menu-item"><a href="#" class="menu-link nav-link">Proyectos</a></li>
-                <li class="nav__menu-item"><a href="#" class="menu-link nav-link">Contactos</a></li>
+            <ul class="nav__menu" >
+                <li class="nav__menu-item"><a href="#1" class="menu-link nav-link">Inicio</a></li>
+                <li class="nav__menu-item"><a href="#2" class="menu-link nav-link">Contenido</a></li>
+                <li class="nav__menu-item"><a href="#3" class="menu-link nav-link">Tecnologias</a></li>
+                <li class="nav__menu-item"><a href="#4" class="menu-link nav-link">Proyectos</a></li>
+                <li class="nav__menu-item"><a href="#5" class="menu-link nav-link">Contactos</a></li>
             </ul>
         </nav>
     </header>
-    <aside class="aside">ASIDE</aside>
-    <main class="inicio">
-        <div>
+    <main class="inicio" id="1">
+        <div class="inicio__texto">
+            <div class="container">
+                <p class="texto">Hola! mi nombre es <b>Brandon</b></p>
+            </div>
+            <p class="texto__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quod nostrum rem, nulla officia ullam eius quisquam reprehenderit dolorum quis ab laudantium. Rem voluptates labore maxime incidunt accusantium nam eos!</p>
+            <button class="inicio__btn">Ver mas</button>
+        </div>
+        <div class="img">
             <img src="data:image/jpeg;base64,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" alt="Programador">
         </div>
-        <div>
-            <div class="container">
-                <p class="text">Hola!, mi nombre es Brandon</p>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quod nostrum rem, nulla officia ullam eius quisquam reprehenderit dolorum quis ab laudantium. Rem voluptates labore maxime incidunt accusantium nam eos!</p>
-        </div>
     </main>
-    <article class="content">Contenido</article>
-    <article class="tecnologia">Tecnologias</article>
-    <article class="proyecto">Proyectos</article>
-    <footer class="footer">Pie</footer>
+    <article class="content" id="2">
+        <div class="content__img">
+            <img src="https://www.blogdelfotografo.com/wp-content/uploads/2022/05/portada-filtro-paisaje.webp" alt="">
+        </div>
+        <div class="content__info">
+            <h3>Sobre mi</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente iure qui amet commodi nisi eius explicabo consequatur cumque totam repellendus, magnam accusantium sequi nostrum iusto voluptatem suscipit beatae numquam porro?</p>
+        </div>
+    </article>
+    <article class="tecnologia" id="3">
+        <div class="tecnologia__container">
+            <h4>Tecnologias que uso:</h4>
+            <div class="tecnologia__grid">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-js"></i>
+                    <p>JAVASCRIPT</p>
+                </div>
+
+            </div>
+        </div>
+    </article>
+    <article class="proyecto" id="4">Proyectos</article>
+    <footer class="footer" id="5">
+        <div class="contactos">
+            <h6>Contactos:</h6>
+            <button class="btn1"><i class="fa-brands fa-youtube"></i></button>
+            <button class="btn2"><i class="fa-brands fa-instagram"></i></button>
+            <button class="btn3"><i class="fa-brands fa-tiktok"></i></button>
+            <button class="btn4"><i class="fa-brands fa-facebook"></i></button>
+            <button class="btn5"><i class="fa-brands fa-github"></i></button>
+        </div>
+    </footer>
 </body>
 <script src="https://kit.fontawesome.com/6b26613874.js" crossorigin="anonymous"></script>
 <script defer src="script.js"></script>

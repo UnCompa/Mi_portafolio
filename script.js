@@ -9,3 +9,8 @@ navToggle.addEventListener("click",()=>{
         navToggle.setAttribute("aria-label", "Abrir menú");
       }
 })
+
+const boton1 = document.querySelector(".btn1")
+boton1.addEventListener("click",()=>{
+    window.open("https://google.com")
+})
