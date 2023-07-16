@@ -5,6 +5,9 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+:root {
+    --color-principal: #E31717;
+}
 html {
     height: 100%;
 }
@@ -27,7 +30,7 @@ h1 {
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: crimson;
+    background-color: var(--color-principal);
     height: 30px;
     width: 30px;
     margin: .3rem;
@@ -62,7 +65,7 @@ h1 {
     padding: 10px 12px;
 }
 .menu-link:hover {
-    border-bottom: 5px solid crimson;
+    border-bottom: 5px solid var(--color-principal);
     transition: .5s;
 }
 .toggle {
@@ -91,9 +94,9 @@ h1 {
 }
 .inicio img {
     margin: 5rem;
-    border: 2px solid crimson;
+    border: 2px solid var(--color-principal);
     height: 400px;
-    border: 5px solid crimson;
+    border: 5px solid var(--color-principal);
 }
 .container {
     display: inline-block;
@@ -115,7 +118,7 @@ h1 {
     cursor .4s step-end infinite alternate;
 }
 .texto b {
-    color: crimson;
+    color: var(--color-principal);
 }
 @keyframes cursor {
     50% {border-color: transparent;}
@@ -131,7 +134,7 @@ h1 {
     margin: 1rem 1rem;
 }
 .inicio__btn {
-    background-color: crimson;
+    background-color: var(--color-principal);
     color: white;
     height: 50px;
     width: 150px;
@@ -140,23 +143,24 @@ h1 {
 }
 .content {
     grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     background-color: azure;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 1fr;
+    width: 100%;
 }
 .content__info {
     padding: 1rem;
 }
 .content img {
     height: 100%;
-    width: 50vw;
+    width: 100%;
     object-fit: cover;
 }
 .content h3 {
     text-align: start;
-    border-bottom: 3px solid crimson;
+    border-bottom: 3px solid var(--color-principal);
     margin-bottom: 1rem;
 }
 .content p {
@@ -176,26 +180,75 @@ h1 {
 }
 .tecnologia h4 {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding: .3rem;
+    border-bottom: 5px solid white;
 }
 .tecnologia__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
-    gap: 50px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 30px;
 }
 .tecnologia__grid div {
     height: 8rem;
-    border: 2px solid snow;
+    border: 2px solid #fff;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/278/150/small/dark-background-abstract-with-light-effect-vector.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     font-size: 1.8rem;
+    backdrop-filter: blur(20px);
 }
+
+
 .proyecto {
-    background-color: yellowgreen;
+    background-image: url("https://e1.pxfuel.com/desktop-wallpaper/103/861/desktop-wallpaper-red-and-black-group-dark-red-black-full.jpg");
     grid-area: proyecto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+.proyecto h5 {
+    color: white;
+    font-size: 2rem;
+    background-color: #be1515;;
+    padding: .3rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+.proyecto b {
+    background-color: #be1515;
+    padding: .2rem ;
+    margin-right: .3rem;
+    border-radius: 10px;font-size: .9rem;
+}
+.proyecto p {
+    font-size: .8rem;
+    text-align: center;
+}
+.proyecto__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.proyecto__container img {
+    height: 150px;
+    width: 200px;
+    margin:  0 .5rem;
+}
+.proyecto__container article {
+    display: flex;
+    margin: 1rem 0rem;
+    background-color: #f115;
+    border-radius: 10px;
+    color: white;
+    padding: 2rem 1rem;
+}
+
 .footer {
     background-color: rgb(188, 14, 66);
     grid-area: footer;
@@ -226,21 +279,18 @@ h1 {
     "proyecto" auto
     "footer" auto;
 }
-@media (min-width: 800px) {
-
-    .grid__container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px 100vh auto auto auto auto;
-        grid-template-areas: 
-        "header"
-        "inicio"
-        "main"
-        "tecnologia"
-        "proyecto"
-        "footer";
-    }
-}
-@media (max-width:769px) {
+@media (max-width: 769px) {
+        .grid__container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px auto auto auto auto auto;
+            grid-template-areas: 
+            "header"
+            "inicio"
+            "main"
+            "tecnologia"
+            "proyecto"
+            "footer";
+        }
     .nav-link {
         color: white;
         text-decoration: none;
@@ -273,7 +323,7 @@ h1 {
     .menu-link:hover,
     .menu-link:active {
         background: none;
-        color: crimson;
+        color: var(--color-principal);
     }
     .toggle {
         display: inline-block;
@@ -290,6 +340,9 @@ h1 {
     .inicio .texto__info {
         font-size: .9rem;
         margin: 0rem 3rem;
+    }
+    .proyecto__container{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (max-width:550px) {
