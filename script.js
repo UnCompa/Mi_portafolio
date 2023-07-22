@@ -1,3 +1,4 @@
+//Menu hambuergesa
 const navToggle = document.querySelector(".toggle")
 const navMenu = document.querySelector(".nav__menu")
 
@@ -19,14 +20,18 @@ navBoton.forEach((boton)=>{
   })
 })
 
-// navBoton.addEventListener("click",()=>{
-//   navMenu.classList.remove("nav__menu--visible")
-// })
-// const boton1 = document.querySelector(".btn1")
-// boton1.addEventListener("click",()=>{
-//     window.open("https://google.com")
-// })
+//Boton CV
+const botonCV = document.querySelector("#btn-cv")
+botonCV.addEventListener('click',()=>{
+      window.open("./CV.html","_self")
+})
 
+//Proyectos 
+const Proyectos1 = document.querySelector("#proyectos1")
+Proyectos1.addEventListener('click',()=>{
+  window.open("https://uncompa.github.io/La_calculadora/","_blank")
+})
+//Formulario
 const formulario = document.getElementById("formulario")
 const inputs = document.querySelectorAll("#formulario input")
 
@@ -34,7 +39,7 @@ const expresiones = {
   nombre: /^[a-zA-Z0-9\_\-\ ]{4,16}$/,
   correo: /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
   asunto:/^[a-zA-Z0-9]{4,30}$/,
-  area:/^[a-zA-Z0-9]{10,100}$/
+  area:/^[a-zA-Z0-9\_\-\ ]{10,400}$/,
 }
 const campos = {
   nombre: false,
@@ -79,4 +84,22 @@ formulario.addEventListener('submit', (e)=>{
   e.defaultPrevented()
   if(campos.nombre && campos.correo && campos.asunto && campos.area)
     formulario.reset();
+})
+//Informacion Botones:
+const infoBoton1 = document.querySelector("#info-btn1")
+const infoBoton2 = document.querySelector("#info-btn2")
+const infoBoton3 = document.querySelector("#info-btn3")
+const infoBoton4 = document.querySelector("#info-btn4")
+const infoBoton5 = document.querySelector("#info-btn5")
+infoBoton1.addEventListener('click',()=>{
+  open("https://facebook.com")
+})
+infoBoton2.addEventListener('click',()=>{
+  open("https://github.com/UnCompa")
+})
+infoBoton3.addEventListener('click',()=>{
+  open("https://instagram.com")
+})
+infoBoton4.addEventListener('click',()=>{
+  open("https://tiktok.com")
 })
