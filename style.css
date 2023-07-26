@@ -202,6 +202,14 @@ h1 {
     background-image: url("calculadora.png");
     background-position: center;
 }
+.proyectos2 {
+    background-image: url("pomodoro.png");
+    background-position: center;
+}
+.proyectos3 {
+    background-image: url("formulario.png");
+    background-position: center;
+}
 /*Seccion Tecnologia*/
 .tecnologia {
     grid-area: tecnologia;
