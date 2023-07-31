@@ -13,6 +13,15 @@
     --color-secundario: #0AD6FA;
     --color-quintario: #051CED;
 }
+@media (prefers-color-scheme: dark){
+    :root {
+        --color-principal: #108DE0;
+        --color-cuartario: #05EDD4;
+        --color-terceario: #1062FA;
+        --color-secundario: #0AD6FA;
+        --color-quintario: #051CED;
+    }    
+}
 html {
     height: 100%;
 }
@@ -210,6 +219,10 @@ h1 {
     background-image: url("formulario.png");
     background-position: center;
 }
+.proyectos4 {
+    background-image: url("galeria.png");
+    background-position: top;
+}
 /*Seccion Tecnologia*/
 .tecnologia {
     grid-area: tecnologia;
@@ -235,39 +248,51 @@ h1 {
 }
 .grid__item {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 25vh;
     width: 30%;
-    margin: .5rem;
-    font-size: 2rem;
-}
-.grid__item b {
+    margin: .2em .2em;
     font-size: 1.5rem;
-    margin: 1rem;
-    transition: 100ms ease-in;
 }
-.grid__item:nth-child(1){
-    border: 2px solid #05EDD4;
-    background-color: #05EDD433;
+.grid__item-1 i {
+    color: #E34C26;
+    font-size: 2em;
 }
-.grid__item:nth-child(2){
-    border: 2px solid #0AD6FA;
-    background-color: #0AD6FA33;
+.grid__item-2 i {
+    color: #264DE4;
+    font-size: 2em;
 }
-.grid__item:nth-child(3){
-    border: 2px solid #1062FA;
-    background-color: #1062FA33;
+.grid__item-3 i {
+    color: #F0DB4F;
+    font-size: 2em;
 }
-.grid__item--b1:hover{
-    border-bottom: 5px solid #05EDD4;
+.grid__item-1{
+    border: 3px solid #E34C26;
+    background-color: transparent;
 }
-.grid__item--b2:hover{
-    border-bottom: 5px solid #0AD6FA;
+.grid__item-2{
+    border: 3px solid #264DE4;
+    background-color: transparent;
 }
-.grid__item--b3:hover{
-    border-bottom: 5px solid #1062FA;
+.grid__item-3{
+    border: 2px solid #F0DB4F;
+    background-color: transparent;
+}
+.grid__item-1:hover,
+.grid__item-1:hover > i{
+    background-color: #F06529;
+    color: #fff;
+}
+.grid__item-2:hover,
+.grid__item-2:hover > i{
+    background-color: #264DE4;
+    color: #fff;
+}
+.grid__item-3:hover,
+.grid__item-3:hover > i {
+    background-color: #323330;
 }
 /*Seccion Aboutme*/
 .aboutme {
@@ -487,8 +512,8 @@ h1 {
         width: 40%;
     }
     .grid__contanier .grid__item {
-        height: 50vh;
-        width: 80%;
+        height: 30vh;
+        width: 70%;
     }
     /*Seccion Aboume*/
     .aboutme {

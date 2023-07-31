@@ -39,6 +39,10 @@ const Proyectos3 = document.querySelector("#proyectos3")
 Proyectos3.addEventListener('click',()=>{
   window.open("https://uncompa.github.io/Formulario_Transferencia/","_blank")
 })
+const Proyectos4 = document.querySelector("#proyectos4")
+Proyectos4.addEventListener('click',()=>{
+  window.open("https://uncompa.github.io/Galeria/","_blank")
+})
 //Formulario
 const formulario = document.getElementById("formulario")
 const inputs = document.querySelectorAll("#formulario input")
